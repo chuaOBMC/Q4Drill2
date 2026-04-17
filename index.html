@@ -11,17 +11,40 @@
     }
 </style>
 <body>
-<div>
-
+    <div>
     <h1>Heat Index Checker</h1>
-    <input type="text" class="form-control" id="Heat" placeholder="type here....">
+<input type="text" class="form-control" id="Heat" placeholder="type here....">
+<input type="text" class="form-control" id="Humidity" placeholder="type here....">
 
 <button class="btn btn-info" onclick="checkHeat()">Check
 </button>
-
 </div>
 
+<script>
+function checkHeat(){
+var Heat = "1st"
+var message = "";
+var HeatIndex = temperature + (0.33 * humidity) - 4;
+var temp = parseFloat(document.getelementbyID."").value;
 
+switch(true){
+case (Heat <= "27"):
+message = "Status: Comfortable/Cool"; break;
+
+case (Heat >= "28"):
+message = "Status: Warm"; break;
+
+case (Heat >="33"):
+message = "Status: Hot"; break;
+
+case (Heat >= "38"):
+message = "Status: Very Hot/Caution"; break;
+
+case (Heat >= "42"):
+message = "Status: Extreme Heat/Danger"; break;
+}
+
+</script>
 
 </body>
 </html>
