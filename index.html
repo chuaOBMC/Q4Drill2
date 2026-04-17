@@ -15,7 +15,7 @@
     <h1>Heat Index Checker</h1>
 <input type="text" class="form-control" id="Heat" placeholder="type here....">
 <input type="text" class="form-control" id="Humidity" placeholder="type here....">
-
+<br>
 <button class="btn btn-info" onclick="checkHeat()">Check
 </button>
 </div>
@@ -24,7 +24,6 @@
 function checkHeat(){
 var Heat = "1st"
 var message = "";
-var HeatIndex = temperature + (0.33 * humidity) - 4;
 var temp = parseFloat(document.getelementbyID."").value;
 
 switch(true){
