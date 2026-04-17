@@ -22,24 +22,25 @@
 
 <script>
 function checkHeat(){
-var Heat = "1st"
-var message = "";
-var temp = parseFloat(document.getelementbyID."").value;
+var temperature = parseFloat(document.getElementById('temperature').value);
+var humidity = parseFloat(document.getElementById('humidity').value);
+var HeatIndex = temperature + (0.33 * humidity) - 4;
+
 
 switch(true){
-case (Heat <= "27"):
+case (HeatIndex <= "27"):
 message = "Status: Comfortable/Cool"; break;
 
-case (Heat >= "28"):
+case (HeatIndex <= "32"):
 message = "Status: Warm"; break;
 
-case (Heat >="33"):
+case (HeatIndex <="37"):
 message = "Status: Hot"; break;
 
-case (Heat >= "38"):
+case (HeatIndex <= "41"):
 message = "Status: Very Hot/Caution"; break;
 
-case (Heat >= "42"):
+case (HeatIndex >= "42"):
 message = "Status: Extreme Heat/Danger"; break;
 }
 alert(message);
