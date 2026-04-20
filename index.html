@@ -25,7 +25,7 @@ function checkHeat(){
 var temperature = parseFloat(document.getElementById('temperature').value);
 var humidity = parseFloat(document.getElementById('humidity').value);
 var HeatIndex = temperature + (0.33 * humidity) - 4;
-
+var message = "";
 
 switch(true){
 case (HeatIndex <= 27):
@@ -43,7 +43,7 @@ message = "Status: Very Hot/Caution"; break;
 case (HeatIndex >= 42):
 message = "Status: Extreme Heat/Danger"; break;
 }
-alert("HeatIndex.toFixed(1) + "\n" + "Status: " + Status)
+alert("Heat Index: " + HeatIndex.toFixed(1) + "\nStatus: " + message);
 
 }
 </script>
